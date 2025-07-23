@@ -17,6 +17,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -45,6 +49,9 @@ button {
   }
 }
 
+.hamburger > span{
+  @apply w-full h-0.5 bg-primary transition-all duration-200;
+}
 .nav-link {
   @apply relative p-1 px-2 cursor-pointer;
   &::before {
@@ -67,8 +74,20 @@ button {
 }
 .contact-icons > div {
   @apply flex justify-center items-center w-[50px] aspect-square border-2 border-light rounded-full text-xl transition-all;
-  &:hover{
+  &:hover {
     @apply bg-primary border-primary text-white;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    @apply py-2 px-4;
+    &::before {
+      content: none;
+    }
+    &:hover {
+      @apply bg-gray-100;
+    }
   }
 }
 

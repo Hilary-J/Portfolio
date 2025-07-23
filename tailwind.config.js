@@ -6,10 +6,10 @@ export default {
       colors: {
         primary: "#273F4F",
         secondary: "#ffeb92",
+        "secondary-dark": "#ffe77c",
         light: "#7e7d7d",
       },
     },
   },
   plugins: [],
 };
-
