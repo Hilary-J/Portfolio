@@ -37,17 +37,38 @@ button {
   cursor: pointer;
 }
 
-.nav-link{
+.section-title {
+  @apply relative text-[30px] inline;
+  &::before {
+    content: "";
+    @apply absolute -bottom-1 left-0 w-3/4 h-1 bg-primary;
+  }
+}
+
+.nav-link {
   @apply relative p-1 px-2 cursor-pointer;
-  &::before{
+  &::before {
     content: "";
     @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-primary transition-[width];
   }
 }
-.nav-link:hover{
+.nav-link:hover {
   @apply text-primary;
-  &::before{
+  &::before {
     @apply w-full;
+  }
+}
+
+.contact-info {
+  @apply flex items-center gap-4;
+}
+.contact-icons {
+  @apply flex gap-5 mt-5;
+}
+.contact-icons > div {
+  @apply flex justify-center items-center w-[50px] aspect-square border-2 border-light rounded-full text-xl transition-all;
+  &:hover{
+    @apply bg-primary border-primary text-white;
   }
 }
 
