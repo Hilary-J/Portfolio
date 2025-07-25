@@ -1,44 +1,13 @@
 import { HtmlHTMLAttributes } from "react";
 import splashImage from "@/assets/images/splash-image.png";
 import userImage from "@/assets/images/user.jpg";
-import * as Icon from "react-bootstrap-icons";
+import { socials } from "@/assets/dummy-data";
 
 const IntroSection = ({
   className,
   ...props
 }: HtmlHTMLAttributes<HTMLDivElement>) => {
-
-    const socials = [
-      {
-        icon: Icon.Github,
-        link: "https://www.github.com/Hilary-J",
-      },
-      {
-        icon: Icon.Linkedin,
-        link: "https://www.github.com/Hilary-J",
-      },
-      {
-        icon: Icon.Twitter,
-        link: "https://www.github.com/Hilary-J",
-      },
-      {
-        icon: Icon.StackOverflow,
-        link: "https://stackoverflow.com/users/24780383/hilary-j",
-      },
-      {
-        icon: Icon.EnvelopeFill,
-        link: "mailto:abdulfataibabajide255@gmail.com",
-      },
-      {
-        icon: Icon.Youtube,
-        link: "https://www.github.com/Hilary-J",
-      },
-      {
-        icon: Icon.Facebook,
-        link: "https://www.github.com/Hilary-J",
-      },
-    ];
-
+  
   return (
     <section className={`bg-secondary text-primary`}>
       <div
@@ -58,7 +27,11 @@ const IntroSection = ({
             <span className="flex gap-4 text-xl">
               {socials.map((social, index) => {
                 return (
-                  <a href={social.link} key={index} className="text-primary hover:text-primary">
+                  <a
+                    href={social.link}
+                    key={index}
+                    className="text-primary hover:text-primary"
+                  >
                     <social.icon />
                   </a>
                 );

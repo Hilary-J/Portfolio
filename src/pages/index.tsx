@@ -1,3 +1,4 @@
+import AboutSection from "@/components/layout/about-section";
 import ContactSection from "@/components/layout/contact-section";
 import IntroSection from "@/components/layout/intro-section";
 import Navbar from "@/components/layout/navbar";
@@ -16,7 +17,10 @@ const Homepage = () => {
     <div>
       <Navbar ref={navbarRef} />
       <IntroSection style={{ height: `calc(100vh - ${navbarHeight}px)` }} />
-      <ContactSection style={{ height: `calc(100vh - ${navbarHeight}px)` }} />
+      <AboutSection style={{ minHeight: `calc(100vh - ${navbarHeight}px)` }} />
+      <ContactSection
+        style={{ minHeight: `calc(100vh - ${navbarHeight}px)` }}
+      />
     </div>
   );
 };

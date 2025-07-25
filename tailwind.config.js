@@ -9,6 +9,9 @@ export default {
         "secondary-dark": "#ffe77c",
         light: "#7e7d7d",
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"]
+      }
     },
   },
   plugins: [],

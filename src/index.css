@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -19,6 +19,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -49,7 +50,7 @@ button {
   }
 }
 
-.hamburger > span{
+.hamburger > span {
   @apply w-full h-0.5 bg-primary transition-all duration-200;
 }
 .nav-link {
@@ -69,14 +70,21 @@ button {
 .contact-info {
   @apply flex items-center gap-4;
 }
-.contact-icons {
-  @apply flex gap-5 mt-5;
-}
-.contact-icons > div {
-  @apply flex justify-center items-center w-[50px] aspect-square border-2 border-light rounded-full text-xl transition-all;
-  &:hover {
-    @apply bg-primary border-primary text-white;
+.contact-form > * {
+  @apply w-full my-1.5 p-2.5 outline-none border border-[lightgray] text-sm;
+  &:focus {
+    @apply border-primary;
   }
+  &::placeholder {
+    @apply text-light;
+  }
+}
+.contact-form > input,
+.contact-form > textarea {
+  @apply bg-white;
+}
+.contact-form > textarea {
+  @apply resize-y;
 }
 
 @media (max-width: 768px) {
@@ -88,6 +96,14 @@ button {
     &:hover {
       @apply bg-gray-100;
     }
+  }
+}
+@media (min-width: 768px) {
+  .gray-sect-card {
+    @apply flex flex-wrap justify-between gap-5 w-full p-8;
+  }
+  .gray-sect-card > div {
+    @apply flex-1;
   }
 }
 
